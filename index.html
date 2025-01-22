@@ -4,28 +4,230 @@
   <meta charset="UTF-8">
   <title>Full Stack Engineer Coding Assignment</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    #timer { font-size: 2em; margin-bottom: 20px; }
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 20px; 
+      line-height: 1.6;
+    }
+    #timer { 
+      font-size: 2em; 
+      margin-bottom: 20px; 
+      color: #ff0000;
+    }
+    h1, h2, h3, h4 {
+      color: #333;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    ul, ol {
+      margin-left: 20px;
+    }
+    a {
+      color: #1a0dab;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .note {
+      background-color: #ffffe0;
+      padding: 10px;
+      border-left: 4px solid #ffeb3b;
+      margin: 10px 0;
+    }
+    .good-luck {
+      font-weight: bold;
+      color: #4caf50;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
   <div id="timer">Time Remaining: 48:00:00</div>
   <h1>Full Stack Engineer Coding Assignment</h1>
-  <!-- Your assignment content goes here -->
+  
+  <h2>Overview</h2>
+  <p>Build a full-stack web application using <strong>Next.js</strong> for the frontend and <strong>Nest.js</strong> for the backend, deployed on <a href="https://railway.app/" target="_blank">Railway.app</a>. You have <strong>48 hours</strong> to complete this assignment.</p>
+  
+  <h2>Requirements Checklist</h2>
+  
+  <h3>1. Project Structure</h3>
+  
+  <h4>Frontend (Next.js):</h4>
+  <ul>
+    <li>Organize a scalable folder structure (e.g., <code>components</code>, <code>pages</code>, <code>styles</code>).</li>
+  </ul>
+  
+  <h4>Backend (Nest.js):</h4>
+  <ul>
+    <li>Structure <code>modules</code>, <code>controllers</code>, and <code>services</code> for maintainability.</li>
+  </ul>
+  
+  <h3>2. Frontend Development</h3>
+  
+  <h4>Technologies:</h4>
+  <ul>
+    <li>Use <strong>Next.js</strong> with <strong>TypeScript</strong>.</li>
+  </ul>
+  
+  <h4>Features:</h4>
+  <ul>
+    <li><strong>Routing:</strong> Implement navigation between pages.</li>
+    <li><strong>API Integration:</strong> Integrate with backend APIs to fetch and manipulate data.</li>
+  </ul>
+  
+  <h4>User Interfaces:</h4>
+  <ul>
+    <li><strong>Login Page:</strong>
+      <ul>
+        <li>Implement <strong>JWT authentication</strong>.</li>
+      </ul>
+    </li>
+    <li><strong>CRUD Interface:</strong>
+      <p>Choose one of the following entities to perform Create, Read, Update, and Delete operations:</p>
+      <ul>
+        <li><strong>Tasks:</strong> Manage to-do items.</li>
+        <li><strong>Posts:</strong> Manage blog posts.</li>
+        <li><strong>Products:</strong> Manage product listings.</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <h4>Design:</h4>
+  <ul>
+    <li>Create a clean and intuitive UI.</li>
+    <li><strong>Note:</strong> Responsive design is not required; focus on desktop layouts.</li>
+  </ul>
+  
+  <h3>3. Backend Development</h3>
+  
+  <h4>Technologies:</h4>
+  <ul>
+    <li>Use <strong>Nest.js</strong> with <strong>TypeScript</strong>.</li>
+  </ul>
+  
+  <h4>Features:</h4>
+  <ul>
+    <li>Set up <strong>RESTful</strong> or <strong>GraphQL</strong> API endpoints to handle frontend requests.</li>
+    <li>Implement middleware for <strong>logging</strong> and <strong>error handling</strong>.</li>
+  </ul>
+  
+  <h4>Database:</h4>
+  <ul>
+    <li>Use <strong>PostgreSQL</strong>.</li>
+    <li>Integrate <strong>Prisma</strong> as the ORM.</li>
+    <li>Implement data validations and secure data handling.</li>
+  </ul>
+  
+  <h3>4. Authentication</h3>
+  <ul>
+    <li>Implement <strong>JWT Authentication</strong> to secure API endpoints.</li>
+    <li>Protect frontend routes to ensure only authenticated users can access certain pages.</li>
+  </ul>
+  
+  <h3>5. CRUD Operations</h3>
+  <ul>
+    <li>Develop <strong>Create</strong>, <strong>Read</strong>, <strong>Update</strong>, and <strong>Delete</strong> functionalities for the chosen entity.</li>
+    <li>Implement proper validation and error handling for all operations.</li>
+  </ul>
+  
+  <h3>6. Deployment</h3>
+  <ul>
+    <li>Deploy the application on <a href="https://railway.app/" target="_blank">Railway.app</a>.</li>
+    <li>Provide instructions to access and test the deployed app.</li>
+  </ul>
+  
+  <h2>Additional Requirements</h2>
+  <ul>
+    <li><strong>TypeScript:</strong> Use consistently in both frontend and backend.</li>
+    <li><strong>New Concept:</strong>
+      <p>Incorporate at least one new technology or concept you’re not familiar with, such as:</p>
+      <ul>
+        <li><strong>GraphQL integration</strong></li>
+        <li><strong>Prisma advanced features</strong></li>
+        <li><strong>Nest.js decorators or modules</strong></li>
+      </ul>
+    </li>
+    <li><strong>Documentation:</strong>
+      <ul>
+        <li><strong>README:</strong>
+          <ul>
+            <li>Setup instructions.</li>
+            <li>How to run the app locally.</li>
+            <li>Deployment steps.</li>
+            <li><strong>Demo Video:</strong> Embed or link a Loom video walking through all create functionalities.</li>
+          </ul>
+        </li>
+        <li><strong>API Documentation:</strong>
+          <p>Use tools like <strong>Swagger</strong> to document API endpoints.</p>
+        </li>
+      </ul>
+    </li>
+    <li><strong>GitHub Repository:</strong>
+      <ul>
+        <li>Create a public repository with a clear and meaningful commit history.</li>
+      </ul>
+    </li>
+    <li><strong>Code Quality:</strong>
+      <ul>
+        <li>Use linters (<a href="https://eslint.org/" target="_blank">ESLint</a>) and formatters (<a href="https://prettier.io/" target="_blank">Prettier</a>).</li>
+        <li>Implement robust error handling.</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <h2>Constraints</h2>
+  <ul>
+    <li><strong>Timeframe:</strong> Complete within <strong>48 hours</strong>.</li>
+    <li><strong>Scope:</strong> Focus on essential features without unnecessary complexity.</li>
+    <li><strong>Security:</strong> Follow best practices to protect against common vulnerabilities (e.g., SQL Injection, XSS).</li>
+    <li><strong>Performance:</strong> Implement basic optimizations like lazy loading where applicable.</li>
+  </ul>
+  
+  <h2>Submission</h2>
+  <ul>
+    <li>Submit a public <strong>GitHub repository</strong> link containing your project.</li>
+    <li>Ensure the repository includes all required documentation and a clear commit history.</li>
+  </ul>
+  
+  <h2>Resources</h2>
+  <ul>
+    <li><a href="https://nextjs.org/docs" target="_blank">Next.js Documentation</a></li>
+    <li><a href="https://docs.nestjs.com/" target="_blank">Nest.js Documentation</a></li>
+    <li><a href="https://www.prisma.io/docs/" target="_blank">Prisma Documentation</a></li>
+    <li><a href="https://docs.railway.app/" target="_blank">Railway.app Documentation</a></li>
+    <li><a href="https://swagger.io/docs/" target="_blank">Swagger Documentation</a></li>
+    <li><a href="https://www.loom.com/" target="_blank">Loom</a></li>
+    <li><a href="https://eslint.org/" target="_blank">ESLint</a></li>
+    <li><a href="https://prettier.io/" target="_blank">Prettier</a></li>
+  </ul>
+  
+  <div class="good-luck">---
+    <p><strong>Good luck!</strong> Showcase your best skills and demonstrate your ability to build a robust, scalable, and maintainable full-stack application.</p>
+  </div>
   
   <script>
     // Set the countdown time (48 hours in seconds)
     let countdown = 48 * 60 * 60;
-
+  
     const timerElement = document.getElementById('timer');
-
+  
     const interval = setInterval(() => {
       const hours = Math.floor(countdown / 3600);
       const minutes = Math.floor((countdown % 3600) / 60);
       const seconds = countdown % 60;
-
+  
       timerElement.textContent = `Time Remaining: ${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-
+  
       if (--countdown < 0) {
         clearInterval(interval);
         timerElement.textContent = 'Time is up!';
