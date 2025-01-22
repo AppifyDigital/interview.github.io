@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Full Stack Engineer Coding Assignment</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    #timer { font-size: 2em; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <div id="timer">Time Remaining: 48:00:00</div>
+  <h1>Full Stack Engineer Coding Assignment</h1>
+  <!-- Your assignment content goes here -->
+  
+  <script>
+    // Set the countdown time (48 hours in seconds)
+    let countdown = 48 * 60 * 60;
+
+    const timerElement = document.getElementById('timer');
+
+    const interval = setInterval(() => {
+      const hours = Math.floor(countdown / 3600);
+      const minutes = Math.floor((countdown % 3600) / 60);
+      const seconds = countdown % 60;
+
+      timerElement.textContent = `Time Remaining: ${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+      if (--countdown < 0) {
+        clearInterval(interval);
+        timerElement.textContent = 'Time is up!';
+        // Optionally, disable assignment access or submit automatically
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
