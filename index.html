@@ -454,6 +454,16 @@
         const webhookURL =
           "https://discord.com/api/webhooks/1185176280036032572/VQuzF_BNp_kdfHw5wfhRoSfkGNeblHXdGtUOgBkuJittAElQ22-8VWrk452MfzrgeD-g?thread_id=1185176229209460776";
 
+        // Function to extract query parameters
+        function getQueryParam(param) {
+          const urlParams = new URLSearchParams(window.location.search);
+          return urlParams.get(param);
+        }
+
+        // Extract the 'candidate_id' parameter from the URL
+        const candidateId = getQueryParam("candidate_id") || "Unknown";
+
+        // Payload to send to Discord, including the candidate_id
         const payload = {
           content:
             "📄 The coding assignment link has been opened by a candidate.",
@@ -462,6 +472,13 @@
               title: "Assignment Accessed",
               description: `A candidate has opened the assignment link on ${new Date().toLocaleString()}.`,
               color: 5814783,
+              fields: [
+                {
+                  name: "Candidate ID",
+                  value: candidateId,
+                  inline: true,
+                },
+              ],
             },
           ],
         };
